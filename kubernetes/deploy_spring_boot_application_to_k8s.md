@@ -72,5 +72,5 @@ docker push <registry-path>/<image-name>:<tag>
 kubectl -n <namespace> rollout restart deployment <deployment-name>
 ```
 
-### Tham khảo
+## Tham khảo
 - [GitLab Container Registry](https://docs.gitlab.com/ee/user/packages/container_registry/)
