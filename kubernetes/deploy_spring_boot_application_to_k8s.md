@@ -24,3 +24,5 @@ docker push <registry-path>/<image-name>:<tag>
 ```shell
 kubectl -n <namespace> rollout restart deployment <deployment-name>
 ```
+
+Như vậy là chúng ta đã xong các bước cho lần đầu tiên triển khai ứng dụng lên K8s. Về sau khi cần cập nhật lại ứng dụng, ta chỉ cần chạy lại [Bước 3](#3-build-docker-image-v-push-ln-gitlab-registry) và [Bước 4](#4-restart-deployment). 
