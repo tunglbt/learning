@@ -6,3 +6,5 @@ relative_links:
   collections: true
 include:
   - README.md
+  - grpc/grpc.md
+  - kubernetes/deploy_spring_boot_application_to_k8s.md
