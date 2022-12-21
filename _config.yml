@@ -6,3 +6,5 @@ relative_links:
   collections: true
 include:
   - README.md
+title: Learning
+description: Một trang github nhỏ tổng hợp những thứ mình đã tìm hiểu và nghĩ rằng sẽ hữu ích trong quá trình làm việc. Nội dung trang gồm các phần lý thuyết và cách sử dụng các công nghệ cho việc xây dựng và phát triển Web Application.
