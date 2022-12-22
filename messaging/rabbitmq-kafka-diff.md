@@ -32,7 +32,7 @@ Kafka là một open-source software platform được phát triển bởi Apach
 
 ### Khi nào thì sử dụng Kafka?
 
-- Khi ta cần tính năng replay các message, consumer có thể trực tiếp replay chúng. Tính năng replay giúp chúng ta không bị mất message nào nếu có lỗi trên consumer hoặc consumer bị quá tải hay chưa ở trạng thái ready. Chúng ta có thể fix issue này bằng cách đưa consumer trở lại trạng thái ready và replay các message.
+- Khi ta cần tính năng replay các message, consumer có thể trực tiếp replay chúng. Tính năng replay giúp chúng ta không bị mất message nào nếu có lỗi trên consumer hoặc consumer bị quá tải hay chưa ở trạng thái ready. Chúng ta có thể fix issue này bằng cách đưa consumer trở lại trạng thái ready và replay các message (đưa offset về vị trí trước đó).
 - Khi ứng dụng có high throughput (vd: 100k requests/giây), lúc này ứng dụng phải xử lý một lượng lớn các message.
 
 ## Khác nhau giữa RabbitMQ và Kafka
@@ -43,9 +43,7 @@ Cả RabbitMQ và Kafka đều phục vụ chung một mục đích, đều là 
 
 #### Apache Kafka: Pull-based approach
 
-Kafka sử dụng cách tiếp cận pull-based với một _smart consumer_, nghĩa là consumer phải request một lượng message từ một offset cụ thể. Kafka cho phép long-pooling (khả năng thiết lập khoảng thời gian một Kafka producer gửi tới một loạt các event), cho phép các consumer khác nhau consume các event ở các nơi khác nhau.
-
-Khi không có các consumer cạnh tranh, Kafka log duy trì thứ tự các message trong cùng một partition, điều này là cần thiết khi dùng mô hình pull. Long-pooling cũng cho phép người dùng tận dụng việc gộp các message để gửi message hiệu quả và có throughput cao hơn. 
+Kafka sử dụng cách tiếp cận pull-based với một _smart consumer_, nghĩa là consumer phải request một lượng message từ một offset cụ thể. Kafka cho phép long-pooling (khả năng thiết lập khoảng thời gian một Kafka producer gửi tới một loạt các event), cho phép các consumer khác nhau consume các event với tốc độ khác nhau. Long-pooling cũng cho phép người dùng tận dụng việc gộp các message để gửi message hiệu quả và có throughput cao hơn. 
 
 #### RabbitMQ: Push-based approach
 
@@ -56,3 +54,4 @@ Mô hình push nhằm mục đích phân chia khối lượng công việc đồ
 ## Tham khảo
 
 - [RabbitMQ Vs Kafka: What’s The Difference?](https://www.interviewbit.com/blog/rabbitmq-vs-kafka/)
+- [RabbitMQ và Kafka Phần 1 - Hai hệ thống truyền tin khác nhau](https://dodangquan.blogspot.com/2018/10/rabbitmq-va-kafka-phan-1-hai-he-thong-truyen-tin-khac-nhau.html)
