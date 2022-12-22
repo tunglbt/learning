@@ -1,11 +1,12 @@
 # Sự khác biệt giữa RabbitMQ và Kafka
 
 - [RabbitMQ](#rabbitmq)
-  - [RabbitMQ là gì?](#rabbitmq-l-g)
-  - [Khi nào thì sử dụng RabbitMQ?](#khi-no-th-s-dng-rabbitmq)
+  - [RabbitMQ là gì?](#rabbitmq-là-gì)
+  - [Khi nào thì sử dụng RabbitMQ?](#khi-nào-thì-sử-dụng-rabbitmq)
 - [Kafka](#kafka)
-  - [Kafka là gì?](#kafka-l-g)
-  - [Khi nào thì sử dụng Kafka?](#khi-no-th-s-dng-kafka)
+  - [Kafka là gì?](#kafka-là-gì)
+  - [Khi nào thì sử dụng Kafka?](#khi-nào-thì-sử-dụng-kafka)
+- [Khác biệt giữa RabbitMQ và Kafka](#khác-nhau-giữa-rabbitmq-và-kafka)
 
 ## RabbitMQ
 ![rabbitmq](rabbitmq.png)
